@@ -9,6 +9,7 @@
   roles:
   - { role: java }
   - { role: elasticsearch }
+  - { role: logstash, when: ((logging_backend is none) or (logging_backend == 'logstash')) }
   - { role: kibana }
   - { role: metricbeat }
 
